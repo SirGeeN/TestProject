@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ejb-jar id="service.access" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd" version="2.1">
+
+   <description><![CDATA[ServiceAccessEJB]]></description>
+   <display-name>HelloBean</display-name>
+
+   <enterprise-beans>
+
+      <!-- Session Beans -->
+      <session id="Session_EnigmaServiceAccess">
+         <description><![CDATA[An EJB named EnigmaServiceAccess]]></description>
+         <display-name>HelloBean</display-name>
+
+         <ejb-name>HelloBean</ejb-name>
+
+         <home>com.hubberspot.ejb.HelloHome</home>
+         <remote>com.hubberspot.ejb.HelloRemote</remote>
+         
+         <!-- <local-home>com.misys.tiplus2.service.access.ejb.EnigmaServiceAccessLocalHome</local-home>
+         <local>com.misys.tiplus2.service.access.ejb.EnigmaServiceAccessLocal</local>
+         -->
+         <ejb-class>com.hubberspot.ejb.HelloBean</ejb-class>
+         <session-type>Stateless</session-type>
+         <transaction-type>Container</transaction-type>
+
+      </session>
+
+   </enterprise-beans>
+
+</ejb-jar>
